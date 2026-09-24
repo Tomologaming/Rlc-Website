@@ -13,9 +13,12 @@
       --muted: #475569;
       --line: #e2e8f0;
       --accent: #2563eb;
-      --btn: #e2e8f0;
-      --btnText: #0f172a;
     }
+
+    * {
+      box-sizing: border-box;
+    }
+
     body {
       margin: 0;
       font-family: Arial, Helvetica, sans-serif;
@@ -23,11 +26,13 @@
       color: var(--text);
       line-height: 1.6;
     }
+
     .wrap {
       max-width: 900px;
       margin: 0 auto;
       padding: 48px 20px;
     }
+
     .card {
       background: var(--card);
       border: 1px solid var(--line);
@@ -35,50 +40,41 @@
       padding: 32px;
       box-shadow: 0 8px 24px rgba(15, 23, 42, 0.06);
     }
-    .topbar {
-      display: flex;
-      justify-content: flex-end;
-      margin-bottom: 1rem;
-    }
-    .lang-btn {
-      border: 1px solid var(--line);
-      background: var(--btn);
-      color: var(--btnText);
-      border-radius: 999px;
-      padding: 0.55rem 0.9rem;
-      cursor: pointer;
-      font: inherit;
-    }
-    .lang-btn:hover {
-      filter: brightness(0.98);
-    }
-    h1, h2, h3 {
+
+    h1, h2 {
       line-height: 1.2;
       margin-top: 0;
     }
+
     h1 {
       font-size: 2rem;
       margin-bottom: 0.5rem;
     }
+
     h2 {
       margin-top: 2rem;
       font-size: 1.25rem;
       padding-top: 0.5rem;
       border-top: 1px solid var(--line);
     }
+
     p, li {
       color: var(--muted);
     }
+
     a {
       color: var(--accent);
       text-decoration: none;
     }
+
     a:hover {
       text-decoration: underline;
     }
+
     ul {
       padding-left: 1.2rem;
     }
+
     .meta {
       margin-bottom: 1.5rem;
       padding: 1rem;
@@ -86,12 +82,36 @@
       border-radius: 12px;
       background: #f8fafc;
     }
+
     .small {
       font-size: 0.95rem;
       color: var(--muted);
     }
-    .lang-en { display: none; }
-    .lang-de.active, .lang-en.active { display: block; }
+
+    .topbar {
+      display: flex;
+      justify-content: flex-end;
+      margin-bottom: 1rem;
+    }
+
+    .lang-btn {
+      border: 1px solid var(--line);
+      background: #f1f5f9;
+      color: var(--text);
+      border-radius: 999px;
+      padding: 0.55rem 0.9rem;
+      cursor: pointer;
+      font: inherit;
+    }
+
+    .lang-btn:hover {
+      background: #e2e8f0;
+    }
+
+    .hidden {
+      display: none;
+    }
+
     code {
       background: #f1f5f9;
       padding: 0.15rem 0.35rem;
@@ -103,10 +123,10 @@
   <main class="wrap">
     <section class="card">
       <div class="topbar">
-        <button class="lang-btn" id="langToggle" type="button" aria-label="Language switch">EN / DE</button>
+        <button class="lang-btn" id="langToggle" type="button">EN / DE</button>
       </div>
 
-      <div class="lang-de active" id="deContent">
+      <div id="deContent">
         <h1>Datenschutzerklärung</h1>
         <p class="small">Stand: 24. September 2026</p>
 
@@ -115,23 +135,15 @@
           <p><strong>E-Mail:</strong> <a href="mailto:testbuildcr34te@gmail.com">testbuildcr34te@gmail.com</a></p>
         </div>
 
-        <p>
-          Der Schutz deiner personenbezogenen Daten ist uns wichtig. Diese Datenschutzerklärung informiert dich darüber,
-          welche Daten wir verarbeiten, zu welchen Zwecken und auf welcher Rechtsgrundlage.
-        </p>
+        <p>Der Schutz deiner personenbezogenen Daten ist uns wichtig. Diese Datenschutzerklärung informiert dich darüber, welche Daten wir verarbeiten, zu welchen Zwecken und auf welcher Rechtsgrundlage.</p>
 
         <h2>1. Verantwortlicher</h2>
         <p>Verantwortlich für die Datenverarbeitung auf dieser Website ist:</p>
-        <p>
-          RLC<br />
-          E-Mail: <a href="mailto:testbuildcr34te@gmail.com">testbuildcr34te@gmail.com</a>
-        </p>
+        <p>RLC<br />E-Mail: <a href="mailto:testbuildcr34te@gmail.com">testbuildcr34te@gmail.com</a></p>
 
         <h2>2. Welche Daten wir verarbeiten</h2>
         <p>Wir verarbeiten ausschließlich die Daten, die du uns selbst übermittelst:</p>
-        <ul>
-          <li>E-Mail-Adresse</li>
-        </ul>
+        <ul><li>E-Mail-Adresse</li></ul>
 
         <h2>3. Zwecke der Verarbeitung</h2>
         <p>Wir verarbeiten deine E-Mail-Adresse ausschließlich für folgende Zwecke:</p>
@@ -142,40 +154,22 @@
         </ul>
 
         <h2>4. Rechtsgrundlage</h2>
-        <p>
-          Die Verarbeitung erfolgt gemäß <strong>Art. 6 Abs. 1 lit. b DSGVO</strong> zur Durchführung vorvertraglicher Maßnahmen
-          bzw. zur Bearbeitung deiner Anfrage und gemäß <strong>Art. 6 Abs. 1 lit. f DSGVO</strong> aufgrund unseres berechtigten
-          Interesses an der Kommunikation mit Interessenten und Nutzern.
-        </p>
+        <p>Die Verarbeitung erfolgt gemäß <strong>Art. 6 Abs. 1 lit. b DSGVO</strong> zur Durchführung vorvertraglicher Maßnahmen bzw. zur Bearbeitung deiner Anfrage und gemäß <strong>Art. 6 Abs. 1 lit. f DSGVO</strong> aufgrund unseres berechtigten Interesses an der Kommunikation mit Interessenten und Nutzern.</p>
 
         <h2>5. Weitergabe an Dritte</h2>
-        <p>
-          Zur Verarbeitung von Formulareingaben nutzen wir <strong>Formspree</strong> als technischen Dienstleister.
-          Die dort eingegebenen Daten werden zur Bearbeitung der Anfrage an Formspree übermittelt.
-          Eine Weitergabe darüber hinaus erfolgt nicht.
-        </p>
+        <p>Zur Verarbeitung von Formulareingaben nutzen wir <strong>Formspree</strong> als technischen Dienstleister. Die dort eingegebenen Daten werden zur Bearbeitung der Anfrage an Formspree übermittelt. Eine Weitergabe darüber hinaus erfolgt nicht.</p>
 
         <h2>6. Hosting</h2>
-        <p>
-          Diese Website wird über <strong>GitHub Pages</strong> bereitgestellt. Die Website ist über eine CNAME-Konfiguration
-          auf eine Subdomain von <code>is-local.host</code> eingebunden.
-        </p>
+        <p>Diese Website wird über <strong>GitHub Pages</strong> bereitgestellt. Die Website ist über eine CNAME-Konfiguration auf eine Subdomain von <code>is-local.host</code> eingebunden.</p>
 
         <h2>7. Cookies und ähnliche Technologien</h2>
-        <p>
-          Wir verwenden ausschließlich <strong>technisch notwendige Cookies</strong> bzw. vergleichbare Technologien,
-          soweit diese für den Cookie-Banner oder die grundlegende Funktionsfähigkeit der Website erforderlich sind.
-          Es werden keine Tracking-, Analyse- oder Marketing-Cookies eingesetzt.
-        </p>
+        <p>Wir verwenden ausschließlich <strong>technisch notwendige Cookies</strong> bzw. vergleichbare Technologien, soweit diese für den Cookie-Banner oder die grundlegende Funktionsfähigkeit der Website erforderlich sind. Es werden keine Tracking-, Analyse- oder Marketing-Cookies eingesetzt.</p>
 
         <h2>8. Tracking und Analyse</h2>
         <p>Wir verwenden keine Webanalyse, kein Tracking und keine Profilbildung.</p>
 
         <h2>9. Speicherdauer</h2>
-        <p>
-          Wir speichern personenbezogene Daten nur so lange, wie dies für die jeweiligen Zwecke erforderlich ist oder
-          gesetzliche Aufbewahrungspflichten bestehen.
-        </p>
+        <p>Wir speichern personenbezogene Daten nur so lange, wie dies für die jeweiligen Zwecke erforderlich ist oder gesetzliche Aufbewahrungspflichten bestehen.</p>
 
         <h2>10. Deine Rechte</h2>
         <p>Du hast nach der DSGVO insbesondere folgende Rechte:</p>
@@ -190,19 +184,13 @@
         </ul>
 
         <h2>11. Beschwerderecht</h2>
-        <p>
-          Du hast das Recht, dich bei einer Datenschutz-Aufsichtsbehörde zu beschweren, wenn du der Ansicht bist,
-          dass die Verarbeitung deiner personenbezogenen Daten gegen die DSGVO verstößt.
-        </p>
+        <p>Du hast das Recht, dich bei einer Datenschutz-Aufsichtsbehörde zu beschweren, wenn du der Ansicht bist, dass die Verarbeitung deiner personenbezogenen Daten gegen die DSGVO verstößt.</p>
 
         <h2>12. Kontakt</h2>
-        <p>
-          Bei Fragen zum Datenschutz erreichst du uns unter
-          <a href="mailto:testbuildcr34te@gmail.com">testbuildcr34te@gmail.com</a>.
-        </p>
+        <p>Bei Fragen zum Datenschutz erreichst du uns unter <a href="mailto:testbuildcr34te@gmail.com">testbuildcr34te@gmail.com</a>.</p>
       </div>
 
-      <div class="lang-en" id="enContent">
+      <div id="enContent" class="hidden">
         <h1>Privacy Policy</h1>
         <p class="small">Last updated: September 24, 2026</p>
 
@@ -211,23 +199,15 @@
           <p><strong>Email:</strong> <a href="mailto:testbuildcr34te@gmail.com">testbuildcr34te@gmail.com</a></p>
         </div>
 
-        <p>
-          We value the protection of your personal data. This Privacy Policy explains what data we process,
-          for what purposes, and on what legal basis.
-        </p>
+        <p>We value the protection of your personal data. This Privacy Policy explains what data we process, for what purposes, and on what legal basis.</p>
 
         <h2>1. Controller</h2>
         <p>The controller responsible for data processing on this website is:</p>
-        <p>
-          RLC<br />
-          Email: <a href="mailto:testbuildcr34te@gmail.com">testbuildcr34te@gmail.com</a>
-        </p>
+        <p>RLC<br />Email: <a href="mailto:testbuildcr34te@gmail.com">testbuildcr34te@gmail.com</a></p>
 
         <h2>2. Data we process</h2>
         <p>We only process the data you provide to us:</p>
-        <ul>
-          <li>Email address</li>
-        </ul>
+        <ul><li>Email address</li></ul>
 
         <h2>3. Purposes of processing</h2>
         <p>We process your email address solely for the following purposes:</p>
@@ -238,37 +218,22 @@
         </ul>
 
         <h2>4. Legal basis</h2>
-        <p>
-          Processing is carried out under <strong>Art. 6(1)(b) GDPR</strong> for pre-contractual measures or handling your request,
-          and under <strong>Art. 6(1)(f) GDPR</strong> based on our legitimate interest in communicating with interested users.
-        </p>
+        <p>Processing is carried out under <strong>Art. 6(1)(b) GDPR</strong> for pre-contractual measures or handling your request, and under <strong>Art. 6(1)(f) GDPR</strong> based on our legitimate interest in communicating with interested users.</p>
 
         <h2>5. Sharing with third parties</h2>
-        <p>
-          We use <strong>Formspree</strong> as a technical service provider to process form submissions.
-          Data submitted there is transmitted to Formspree for request handling.
-          No further sharing takes place.
-        </p>
+        <p>We use <strong>Formspree</strong> as a technical service provider to process form submissions. Data submitted there is transmitted to Formspree for request handling. No further sharing takes place.</p>
 
         <h2>6. Hosting</h2>
-        <p>
-          This website is hosted via <strong>GitHub Pages</strong>. It is connected through a CNAME configuration
-          to a subdomain of <code>is-local.host</code>.
-        </p>
+        <p>This website is hosted via <strong>GitHub Pages</strong>. It is connected through a CNAME configuration to a subdomain of <code>is-local.host</code>.</p>
 
         <h2>7. Cookies and similar technologies</h2>
-        <p>
-          We use only <strong>technically necessary cookies</strong> or similar technologies where required for the cookie banner
-          or the basic functionality of the website. No tracking, analytics, or marketing cookies are used.
-        </p>
+        <p>We use only <strong>technically necessary cookies</strong> or similar technologies where required for the cookie banner or the basic functionality of the website. No tracking, analytics, or marketing cookies are used.</p>
 
         <h2>8. Tracking and analytics</h2>
         <p>We do not use web analytics, tracking, or profiling.</p>
 
         <h2>9. Retention period</h2>
-        <p>
-          We retain personal data only as long as necessary for the respective purposes or as required by law.
-        </p>
+        <p>We retain personal data only as long as necessary for the respective purposes or as required by law.</p>
 
         <h2>10. Your rights</h2>
         <p>Under the GDPR, you have in particular the following rights:</p>
@@ -283,30 +248,25 @@
         </ul>
 
         <h2>11. Right to lodge a complaint</h2>
-        <p>
-          You have the right to lodge a complaint with a supervisory authority if you believe that the processing of your personal data
-          violates the GDPR.
-        </p>
+        <p>You have the right to lodge a complaint with a supervisory authority if you believe that the processing of your personal data violates the GDPR.</p>
 
         <h2>12. Contact</h2>
-        <p>
-          If you have questions about data protection, contact us at
-          <a href="mailto:testbuildcr34te@gmail.com">testbuildcr34te@gmail.com</a>.
-        </p>
+        <p>If you have questions about data protection, contact us at <a href="mailto:testbuildcr34te@gmail.com">testbuildcr34te@gmail.com</a>.</p>
       </div>
     </section>
   </main>
 
   <script>
-    const btn = document.getElementById('langToggle');
-    const de = document.getElementById('deContent');
-    const en = document.getElementById('enContent');
+    const toggle = document.getElementById('langToggle');
+    const deContent = document.getElementById('deContent');
+    const enContent = document.getElementById('enContent');
 
-    btn.addEventListener('click', () => {
-      const isDE = de.classList.contains('active');
-      de.classList.toggle('active', !isDE);
-      en.classList.toggle('active', isDE);
-      document.documentElement.lang = isDE ? 'en' : 'de';
+    toggle.addEventListener('click', () => {
+      const showGerman = !deContent.classList.contains('hidden');
+
+      deContent.classList.toggle('hidden', showGerman);
+      enContent.classList.toggle('hidden', !showGerman);
+      document.documentElement.lang = showGerman ? 'en' : 'de';
     });
   </script>
 </body>
